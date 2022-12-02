@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class CategorySeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $data = [
+            [
+                'category'=>'Canned goods',
+                'description'=>'Canned goods items.'
+            ],
+            [
+                'category'=>'Pastries',
+                'description'=>'Cakes and other delight items is found.'
+            ],
+            [
+                'category'=>'Frozen Goods',
+                'description'=>'This stands as category for frozen products.'
+            ],
+            [
+                'category'=>'Native filipino Food Snacks',
+                'description'=>'This is native filipino food snacks .'
+            ],
+            [
+                'category'=>'Chips',
+                'description'=>'This is for the chip products.'
+            ],
+        ];
+
+	 foreach($data as $categories) {
+            \App\Category::create($categories);
+        }
+    }
+}

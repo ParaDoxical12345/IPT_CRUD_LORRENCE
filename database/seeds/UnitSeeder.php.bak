@@ -1,0 +1,45 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class UnitSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $data = [
+            [
+                'unit_type'=>'milliters(s)',
+                'description'=>'This stands as the milliliters unit.'
+            ],
+            [
+                'unit_type'=>'gram(s)',
+                'description'=>'This stands as the kilogram unit.'
+            ],
+            [
+                'unit_type'=>'millimeter(s)',
+                'description'=>'This stands as the millimeter unit.'
+            ],
+            [
+                'unit_type'=>'gram(s)',
+                'description'=>'This stands as the gram unit.'
+            ],
+            [
+                'unit_type'=>'gram(s)',
+                'description'=>'This stands as the grams unit.'
+            ],
+        ];
+
+
+
+
+
+  foreach($data as $units) {
+            \App\Unit::create($units);
+        }
+    }
+}
